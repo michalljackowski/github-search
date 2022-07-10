@@ -1,0 +1,31 @@
+@import '../../assets/styles/colors.scss';
+@import '../../assets/styles/variables.scss';
+
+.no-user-box{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  .no-user-info {
+    margin-top: 15px;
+    padding: 20px;
+    background-color: $background-color--white;
+    box-shadow: $box-shadow;
+    border-radius: 30px;
+  }
+
+  .back-to-home {
+    height: auto;
+    background-color: $background-color--white;
+    box-shadow: $box-shadow;
+    border-radius: 30px;
+    padding: 5px;
+    margin-top: 15px;
+  }
+
+  .back-to-home:hover {
+    cursor: pointer;
+    font-weight: bolder;
+  }
+
+}

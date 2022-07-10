@@ -1,0 +1,25 @@
+<div class="background">
+  <app-logo class="logo"></app-logo>
+  <div class="user-box" (click)="backToListOfRepos()">
+    <span class="user">{{userName}}</span>{{'/' + repositoryName}}
+  </div>
+  <div *ngIf="displayRepo" class="details-container">
+    <div class="percentage-bar">
+      <div class="repo" *ngFor="let repoDetail of repoDetails">
+        <div [ngStyle]="repoDetail.percentStyle" class="repo-content"></div>
+      </div>
+    </div>
+    <div class="languages-details">
+      <div *ngFor="let repoDetail of repoDetails">
+        <div [ngStyle]="repoDetail.percentStyle" class="language">{{repoDetail.language}}{{': ' + repoDetail.percent + '%'}}</div>
+      </div>
+    </div>
+  </div>
+  <div *ngIf="!displayRepo" class="no-languages">
+    no languages to display
+  </div>
+  <div (click)="backToListOfRepos()" class="back-to-repos">
+    <p>&lt;back to repositories</p>
+  </div>
+</div>
+

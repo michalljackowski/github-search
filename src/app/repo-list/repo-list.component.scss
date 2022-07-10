@@ -1,0 +1,80 @@
+@import '../../assets/styles/colors.scss';
+@import '../../assets/styles/variables.scss';
+
+.background {
+
+    .username {
+      margin: 20px 0;
+    }
+
+    .repository {
+      height: auto;
+      width: 100%;
+      width: 300px;
+      padding: 10px;
+      margin: 3px;
+      margin-bottom: 10px;
+      border-radius: 30px;
+      background-color: $background-color--white;
+      box-shadow: $box-shadow;
+    }
+
+    .repository:hover {
+      cursor: pointer;
+      background-color: $background-color--darkerwhite;
+    }
+
+    .user-norepos {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+
+      .back-to-home {
+        background-color: $background-color--white;
+        box-shadow: $box-shadow;
+        border-radius: 30px;
+        padding: 5px;
+        margin-top: 15px;
+        width: fit-content;
+      }
+
+      .back-to-home:hover {
+        cursor: pointer;
+        font-weight: bolder;
+      }
+    }
+
+    .pagination {
+      margin: 15px 0;
+      height: auto;
+      display: flex;
+      flex-direction: row;
+      justify-content: space-between;
+      background-color: $background-color--white;
+      border-radius: 30px;
+      box-shadow: $box-shadow;
+
+      .prev:hover, .next:hover {
+        cursor: pointer;
+        font-weight: bolder;
+      }
+    }
+
+    .pagination > div {
+      margin: 10px;
+    }
+
+    .back-to-home {
+      height: auto;
+      background-color: $background-color--white;
+      box-shadow: $box-shadow;
+      border-radius: 30px;
+      padding: 5px;
+      margin-top: 15px;
+    }
+
+    .back-to-home:hover {
+      cursor: pointer;
+      font-weight: bolder;
+    }
+}

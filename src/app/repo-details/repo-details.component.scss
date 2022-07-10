@@ -1,0 +1,62 @@
+@import '../../assets/styles/colors.scss';
+@import '../../assets/styles/variables.scss';
+
+.background {
+  .logo {
+    height: auto;
+  }
+
+  .user-box {
+    margin: 15px 0;
+    cursor: pointer;
+    height: auto;
+
+    .user:hover { font-weight: bolder;}
+  }
+
+  .details-container {
+    background-color: $background-color--white;
+    box-shadow: $box-shadow;
+    padding: 20px;
+
+    .percentage-bar{
+      display: flex;
+      margin-top: 30px;
+
+      .repo-content {
+        height: 20px;
+      }
+    }
+
+    .languages-details {
+      margin-top: 30px;
+
+      .language {
+        width: 100% !important;
+      }
+    }
+  }
+
+  .no-languages {
+    padding: 20px;
+    background-color: $background-color--white;
+    box-shadow: $box-shadow;
+    border-radius: 30px;
+  }
+
+  .back-to-repos {
+    background-color: $background-color--white;
+    box-shadow: $box-shadow;
+    border-radius: 30px;
+    padding: 5px;
+    margin-top: 15px;
+  }
+
+  .back-to-repos:hover {
+    cursor: pointer;
+    font-weight: bolder;
+  }
+}
+
+
+

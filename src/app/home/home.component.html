@@ -1,0 +1,24 @@
+<div class="background">
+  <app-logo class="logo"></app-logo>
+  <div [ngClass]="showHistory ? 'searchbar searchbar--rounded' : 'searchbar'">
+    <span (click)="findRepository()" class="search-icon material-icons md-48">search</span>
+    <input [(ngModel)]="inputValue"
+            (focus)="createArrayFromCookie()"
+            (keyup.enter)="findRepository()"
+            class="search-field" type="text"
+            placeholder="Search github user">
+    <span *ngIf="inputValue" (click)="clearInput()" class="close-icon material-icons md-48">close</span>
+  </div>
+  <div *ngIf="showHistory" class="history-box">
+    <div class="history-element" *ngFor="let element of searchHistory | slice:0:14; let i = index">
+        <div class="scheduler-box">
+          <span class="scheduler-icon material-icons md-24">scheduler</span>
+          <span class="repo-history-name" (click)="fillInputFromHistory(element)">{{element}}</span>
+        </div>
+        <span (click)="removeFromHistory(i)" class="close-icon material-icons md-24">close</span>
+    </div>
+    <div (click)="hideHistory()" class="hide-history">
+      <p>hide history</p>
+    </div>
+  </div>
+</div>

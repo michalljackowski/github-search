@@ -1,0 +1,20 @@
+<div class="background">
+  <app-logo class="logo"></app-logo>
+  <p class="username">{{userName}}</p>
+  <div *ngFor="let repository of repositories">
+    <div (click)="goToRepositoryInfo(repository.name)">
+      <p class="repository">{{repository.name}}</p>
+    </div>
+  </div>
+  <div *ngIf="noRepos" class="user-norepos">
+      <p>This user have no repositories</p>
+  </div>
+  <div *ngIf="nextPageUrl || previousPageUrl" class="pagination">
+    <div (click)="previousPage()" class="prev"><p>&lt;prev</p></div>
+    <div class="current">{{currentPage + '/' + apiPages}}</div>
+    <div (click)="nextPage()" class="next"><p>next&gt;</p></div>
+  </div>
+  <div (click)="backToHome()" class="back-to-home">
+    <p>&lt;back to home</p>
+   </div>
+</div>
